@@ -1,12 +1,17 @@
-﻿<Window x:Class="SelectionColor.MainWindow"
+﻿<Window x:Name="SC" x:Class="SelectionColor.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SelectionColor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Selection Color" Height="336" Width="328" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FFF3F3F3">
+        <local:ColorPicker x:Name="textSelectCP" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top"/>
+        <local:ColorPicker x:Name="rectSelectFillCP" HorizontalAlignment="Left" Margin="156,46,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SetColorsButton" Content="Set chosen colors" HorizontalAlignment="Left" Margin="20,261,0,0" VerticalAlignment="Top" Width="120" Click="SetColorsButton_Click" Height="27"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Selected text background / Drag selection box border" VerticalAlignment="Top" Height="31" Width="141" FontSize="11" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="168,25,0,0" TextWrapping="Wrap" Text="Drag selection box fill" VerticalAlignment="Top" Height="16" Width="117" FontSize="11" FontWeight="Bold"/>
     </Grid>
 </Window>
